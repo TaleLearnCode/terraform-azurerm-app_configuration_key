@@ -23,6 +23,6 @@ module "kv" {
   configuration_store_id = data.azurerm_app_configuration.existing.id
   type                   = "vault"
   key                    = "my-key"
-  vault_key_reference    = data.azurerm_key_vault_secret.existing.key_vault_secret_versionless_id
+  vault_key_reference    = data.azurerm_key_vault_secret.existing.versionless_id
   label                  = "my-label"
 }
